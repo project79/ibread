@@ -1,0 +1,192 @@
+@import "mixins/hdpi";
+// Normalize 
+@import "normalize";
+// Grid
+@import "gridism";
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+// Variables
+// Colors
+$brand-color: #dca74c;
+$black: #292929;
+$grey: #777777;
+$light-grey: #f8f8f8;
+$white: #fff;
+// Fonts
+$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$base-font-size: 14px;
+$base-background-color: $black;
+$base-font-color: $grey;
+// Headings
+$heading-font-family: $base-font-family;
+$heading-font-color: $black;
+// Links
+$link: $brand-color;
+$link-hover: $white;
+// Margins & paddings
+$spacing: 1em;
+// Misc
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+// Base styles
+@import "components/base";
+
+// Wrap all
+header,
+.pitch,
+.showcase,
+footer {
+	@extend .wrap;
+}
+
+header,
+.pitch {
+	background: $white;
+}
+
+.showcase {
+	background: $light-grey;
+}
+
+.pitch,
+.showcase {
+	padding: 80px 0;
+}
+
+.logo a {
+	display: block;
+	width: 140px;
+	height: 101px;
+	background: url('../images/logo.jpg') no-repeat;
+	text-indent: -9999px;
+
+	@include hidpi() {
+		background: url('../images/logo@2x.jpg') no-repeat;
+		background-size: 140px 101px;
+	}
+
+}
+
+
+.gallery {
+	max-width: 1180px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	text-align: center;
+	padding: 0;
+
+	img {
+		width: 270px;
+		height: 206px;
+	}
+
+	.image {
+		display: inline-block;
+		width: 270px;
+		height: 206px;
+		padding: 10px;
+	}
+
+	.image:after {
+		clear: both;
+	}
+
+	// Eye of the tiger
+	.contenthover {
+		height: 100%;
+		opacity: .8;
+		cursor: pointer;
+		background: $brand-color url('../images/eye_hover.svg') no-repeat center center;
+	}
+}
+
+footer {
+	text-align: center;
+	color: $light-grey;
+
+	h3 {
+		color: $light-grey;
+	}
+
+	p {
+		font-size: 16px;
+		font-style: italic;
+	}
+}
+
+.footer-logo {
+	margin: 0 auto;
+	width: 140px;
+	height: 101px;
+	margin-top: -37px; 
+}
+
+// Tablet, gallery
+@media screen and(min-width: 569px) and (max-width: 768px) {
+	.gallery {
+		text-align: center;
+
+		.image {
+			display: inline-block;
+			padding: 20px;
+			width: 270px;
+			height: 206px;
+		}
+
+		// Eye of the tiger
+		.contenthover {
+			height: 100%;
+			opacity: .8;
+			cursor: pointer;
+			background: $brand-color url('../images/eye_hover.svg') no-repeat center center;
+		}
+	}
+}
+
+// Phone
+@media screen and (max-width: 568px) {
+	.logo a {
+		margin: 0 auto;
+	}
+
+	h1, h2, .lead, .appstore {
+		text-align: center;
+	}
+
+	h1 { font-size: 36px; }
+	h2 { font-size: 32px; }
+	h3 { font-size: 24px; }
+	.lead { font-size: 18px; }
+
+
+	.gallery {
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+		padding: 0;
+
+		.image {
+			display: inline-block;
+			width: 270px;
+			height: 206px;
+			padding-bottom: 30px;
+		}
+
+		// Eye of the tiger
+		.contenthover {
+			height: 100%;
+			opacity: .8;
+			cursor: pointer;
+			background: $brand-color url('../images/eye_hover.svg') no-repeat center center;
+		}
+	}
+
+	footer p {
+		font-size: 14px;
+	}
+
+}

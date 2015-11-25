@@ -1,0 +1,141 @@
+/*  Base 
+----------------------------- */
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  background: $base-background-color;
+  color: $base-font-color;
+  margin: 0;
+  line-height: 1.5; 
+}
+
+/*  Links
+----------------------------- */
+
+a {
+    color: $link;
+    text-decoration: none;
+    word-wrap: break-word;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: $link-hover;
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+    background: none;
+}
+
+a:hover img {
+    border: none;
+    background: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+/*  Typography
+----------------------------- */
+
+p {
+    margin-bottom: $spacing;
+}
+
+p.lead {
+    font-size: 24px;
+    font-weight: $light;
+}
+
+/*  Images
+----------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*  Lists
+----------------------------- */
+
+ul, ol, dl {
+    margin-bottom: $spacing;
+    margin-left: 20px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+ul.disc {
+    list-style: disc;
+    margin-bottom: $spacing;
+    margin-left: 20px;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dl {
+    margin-left: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+.no-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*  Heading
+-----------------------------*/
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-family:$heading-font-family;
+    margin: 0 0 1em 0;
+    color: $heading-font-color;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: $light;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: $light;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: $bold;
+}
+
+/*  Bold */
+strong {
+    font-weight: 700;
+}
+
+/*  Italics */
+em {
+    font-style: italic;
+}
+
+small {
+    font-size: 75%;
+}
